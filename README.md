@@ -18,5 +18,12 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-"# vue-music" 
+# 主要技术栈
+ * vue全家桶
+ * vue-lazyload
+ * better-scroll
+ * stylus
+ * es6模块化、Promise、解构赋值
+ * axios
+ * jsonp
+ * vue-cli
