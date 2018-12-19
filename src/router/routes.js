@@ -1,51 +1,43 @@
-import Recommend from 'components/recommend/recommend'
-import Singer from 'components/singer/singer'
-import Rank from 'components/rank/rank'
-import Search from 'components/search/search'
-import SingerDetail from 'components/singer-detail/singer-detail'
-import Disc from 'components/disc/disc'
-import TopList from 'components/top-list/top-list'
-
 export default [
-    {
-        path: '/',
-        redirect: '/recommend'
-    },
-    {
-        path: '/recommend',
-        component: Recommend,
-        children: [
-            {
-                path: ':id',
-                component: Disc
-            }
-        ]
-    },
-    {
-        path: '/singer',
-        component: Singer,
-        children: [
-            {
-                path: ':id',
-                component: SingerDetail
-            }
-        ]
-    },
-    {
-        path: '/rank',
-        component: Rank,
-        children: [
-            { path: ':id', component: TopList }
-        ]
-    },
-    {
-        path: '/search',
-        component: Search,
-        children: [
-            {
-                path: ':id',
-                component: SingerDetail
-            }
-        ]
-    }
-]
+  {
+    path: "/",
+    redirect: "/recommend"
+  },
+  {
+    path: "/recommend",
+    component: () => import("components/recommend/recommend"),
+    children: [
+      {
+        path: ":id",
+        component: () => import("components/disc/disc")
+      }
+    ]
+  },
+  {
+    path: "/singer",
+    component: () => import("components/singer/singer"),
+    children: [
+      {
+        path: ":id",
+        component: () => import("components/singer-detail/singer-detail")
+      }
+    ]
+  },
+  {
+    path: "/rank",
+    component: () => import("components/rank/rank"),
+    children: [
+      { path: ":id", component: () => import("components/top-list/top-list") }
+    ]
+  },
+  {
+    path: "/search",
+    component: () => import("components/singer/singer"),
+    children: [
+      {
+        path: ":id",
+        component: () => import("components/singer-detail/singer-detail")
+      }
+    ]
+  }
+];
