@@ -1,4 +1,5 @@
-# 基于vue.js 音乐播放器
+# 基于vue.js 音乐播放器      
+![Image text](http://ps5shq58f.bkt.clouddn.com/vue-music.gif)
 
 > A Vue.js project
 
@@ -26,4 +27,6 @@ npm run build --report
  * es6模块化、Promise、解构赋值
  * axios
  * jsonp
- * vue-cli
+ * vue-cli   
+
+ **黄轶老师**🐂🍺

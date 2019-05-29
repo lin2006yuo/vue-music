@@ -36,7 +36,7 @@ export default {
     created(){
         this.$watch('query', debounce((newQuery) => {
             this.$emit('query', newQuery)
-        },200))
+        },200))                                   // debounce执行 返回function(watch的新值),接受watch到的值,
     },
     // watch: {
     //     query(newQuery){

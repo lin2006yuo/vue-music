@@ -38,7 +38,8 @@ export default {
     mixins: [playListMixin],
     data() {
         return {
-            scrollY: 0
+            scrollY: 0,
+            minTranslateY: ''
         };
     },
     props: {
